@@ -9,6 +9,7 @@ public class ReadFile {
     public static void main(String[] args) {
         try {
             File myfile = new File("hello.txt");
+
             Scanner myReader =  new Scanner(myfile);
             while(myReader.hasNextLine()){
                 String data = myReader.nextLine();
