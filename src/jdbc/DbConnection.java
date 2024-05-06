@@ -10,12 +10,12 @@ public class DbConnection {
         static final String QUERY = " select * from user";
 
     public static void main(String[] args) {
-    try (
+    try {
         Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
         Statement st =  conn.createStatement();
         ResultSet rs=  st.executeQuery(QUERY);
 
-    ){
+
         while (rs.next()){
             System.out.println("name: " + rs.getString("FirstName"));
         }
